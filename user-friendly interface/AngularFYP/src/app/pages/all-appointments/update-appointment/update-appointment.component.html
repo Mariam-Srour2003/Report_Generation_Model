@@ -1,0 +1,53 @@
+<h2 mat-dialog-title>Add User</h2>
+<mat-dialog-content>
+    <form [formGroup]="UserForm" (ngSubmit)="onSubmit()">
+        <div class="form-fields-container">
+            <div class="selectors-container">
+                <!-- Date Picker -->
+                <mat-form-field appearance="outline" class="example-form-field">
+                    <mat-label>Choose date</mat-label>
+                    <input matInput [matDatepicker]="datepicker" formControlName="appointmentDate">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-error>
+                        Date is required
+                    </mat-error>
+                    <mat-datepicker-toggle matIconSuffix [for]="datepicker"></mat-datepicker-toggle>
+                    <mat-datepicker #datepicker>
+                        <mat-datepicker-actions>
+                            <button mat-button matDatepickerCancel>Cancel</button>
+                            <button mat-raised-button color="primary" matDatepickerApply>Apply</button>
+                        </mat-datepicker-actions>
+                    </mat-datepicker>
+                </mat-form-field>
+
+                <!-- Time Picker -->
+                <mat-form-field appearance="outline" class="example-form-field">
+                    <mat-label>Choose time</mat-label>
+                    <input matInput type="time" formControlName="appointmentTime" placeholder="HH:MM">
+                    <mat-error>
+                        Time is required
+                    </mat-error>
+                </mat-form-field>
+
+                <!-- Doctor Selection -->
+                <mat-form-field appearance="outline">
+                    <mat-label>Doctor</mat-label>
+                    <mat-select formControlName="doctorId">
+                        <mat-option *ngFor="let doctor of doctors" [value]="doctor.id">
+                            {{ doctor.firstName }} {{ doctor.lastName }}
+                        </mat-option>
+                    </mat-select>
+                    <mat-error>
+                        Doctor is required
+                    </mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions class="dialog-actions-container">
+    <button mat-button color="warn" mat-dialog-close>Cancel</button>
+    <button mat-button color="primary" (click)="onSubmit()" [disabled]="UserForm.invalid" cdkFocusInitial>
+        Save
+    </button>
+</mat-dialog-actions>

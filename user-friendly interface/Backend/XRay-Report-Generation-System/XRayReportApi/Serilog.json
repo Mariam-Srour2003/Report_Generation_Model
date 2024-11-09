@@ -1,0 +1,17 @@
+{
+  "Serilog": {
+    "Using": [ "Serilog.Sinks.MSSqlServer" ],
+    "MinimumLevel": "error",
+    "WriteTo": [
+      {
+        "Name": "MSSqlServer",
+        "Args": {
+          // change server name
+          "connectionString": "Server=DESKTOP-GLK5NM8\\SQLEXPRESS2014;Database=FYP;Trusted_Connection=True;TrustServerCertificate=True;MultipleActiveResultSets=true;Integrated Security=true;Encrypt=False",
+          "tableName": "Logs",
+          "autoCreateSqlTable": true
+        }
+      }
+    ]
+  }
+}

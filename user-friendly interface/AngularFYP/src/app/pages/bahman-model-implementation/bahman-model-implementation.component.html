@@ -1,0 +1,30 @@
+<div class="container">
+    <h1>X-Ray Report Generator</h1>
+
+    <div>
+        <label for="fileInput">Select Chest X-Ray Image:</label>
+        <input type="file" id="fileInput" (change)="onFileSelected($event)">
+    </div>
+
+    <button (click)="onSubmit()">Generate Report</button>
+
+    <div *ngIf="generatedReport" class="generated-report">
+        <div class="header">
+            <img src="../../../assets/images/logo.png" alt="Model Logo">
+            <div class="model-name">Bahman DenseNet121 Model</div>
+        </div>
+        <h2>Generated Report:</h2>
+        <p>{{ generatedReport }}</p>
+
+        <div *ngIf="selectedFile">
+            <h3>Chest X-Ray Image:</h3>
+            <img [src]="imageSrc" alt="Selected X-Ray" class="xray-image">
+        </div>
+    </div>
+
+    <div *ngIf="errorMessage" class="error">
+        <p>{{ errorMessage }}</p>
+    </div>
+
+    <button *ngIf="generatedReport" (click)="exportAsPDF()">Export as PDF</button>
+</div>

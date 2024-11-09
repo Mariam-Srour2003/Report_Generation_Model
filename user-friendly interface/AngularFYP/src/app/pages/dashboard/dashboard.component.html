@@ -1,0 +1,11 @@
+<div class="row">
+    <app-hospital-cards></app-hospital-cards>
+</div>
+<div style="display: flex; width: 100%;">
+    <div class="row mt-5">
+        <app-hospital-charts [hospital]="'Bahman'" [filePath]="'./assets/BahmanData.xlsx'"></app-hospital-charts>
+    </div>
+    <div class="row mt-5">
+        <app-hospital-charts [hospital]="'Al Zahraa'" [filePath]="'./assets/AlZahraaData.xlsx'"></app-hospital-charts>
+    </div>
+</div>

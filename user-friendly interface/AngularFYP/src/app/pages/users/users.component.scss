@@ -1,0 +1,46 @@
+.table-card {
+    padding: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add-user-button {
+    display: flex;
+    align-items: center;
+    background-color: #0e4f71;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-user-button:hover {
+    background-color: #0e4e71d8;
+}
+
+.add-user-button mat-icon {
+    margin-right: 8px;
+}
+
+table {
+    width: 100%;
+}
+
+.mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+th{
+    background-color: #0e4f71!important;
+    color: white;
+}
+td,
+th {
+    width: 25%;
+}

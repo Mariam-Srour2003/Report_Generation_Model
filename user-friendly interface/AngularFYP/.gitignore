@@ -1,0 +1,45 @@
+# Ignore node modules
+node_modules/
+
+# Ignore Angular output directories
+dist/
+build/
+
+# Ignore .vscode directory (if you don’t want to share IDE settings)
+.vscode/
+
+# Ignore environment files (for Angular projects)
+src/environments/*.ts
+
+# Ignore compiled TypeScript files (if using `outDir` in tsconfig.json)
+out-tsc/
+
+# Ignore package lock files (if you don't want to lock dependencies to specific versions)
+package-lock.json
+yarn.lock
+
+# Ignore Angular cache directory
+.angular/
+
+# Ignore editor configuration files (optional)
+.editorconfig
+
+# Ignore TypeScript configuration files (optional, if they are local and not shared settings)
+tsconfig.json
+tsconfig.app.json
+tsconfig.spec.json
+tsconfig.e2e.json
+
+# Ignore IDE-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Ignore logs and temporary files
+*.log
+temp/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db

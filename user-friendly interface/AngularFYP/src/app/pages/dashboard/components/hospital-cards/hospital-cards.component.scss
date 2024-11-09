@@ -1,0 +1,49 @@
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.hospital-card {
+    flex: 1;
+    
+    min-width: 250px;
+    max-width: 50%;
+}
+
+.card {
+    background-color: #0e4f71;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    font-size: 1.25rem;
+    font-weight: bold;
+    background-color: #093447;
+    border-bottom: 2px solid #0e4f71;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.card-header mat-icon {
+    margin-right: 10px;
+    font-size: 1.8rem;
+}
+
+.card-body {
+    padding: 10px;
+}
+
+.card-title {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+.card-title mat-icon {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}

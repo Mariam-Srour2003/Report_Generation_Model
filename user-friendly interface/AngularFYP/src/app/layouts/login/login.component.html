@@ -1,0 +1,30 @@
+<div class="container-fluid vh-100">
+    <div style="margin-left: -25px;" class="row h-100">
+        <div class="col-md-6 d-none d-md-block" id="image-container">
+            <img src=".\assets\images\loginimagee.png" class="img-fluid h-100" alt="Login Image">
+        </div>
+        <div class="col-md-6 d-flex align-items-center justify-content-center">
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="w-75">
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>User Name</mat-label>
+                    <input matInput formControlName="email" type="email">
+                    <mat-error *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
+                        <span *ngIf="loginForm.get('email')?.hasError('required')">User name is required</span>
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Password</mat-label>
+                    <input matInput formControlName="password" type="password">
+                    <mat-error *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+                        <span *ngIf="loginForm.get('password')?.hasError('required')">Password is required</span>
+                        <span *ngIf="loginForm.get('password')?.hasError('minlength')">Password must be at least 6
+                            characters</span>
+                    </mat-error>
+                </mat-form-field>
+
+                <button mat-raised-button color="primary" type="submit" class="w-100">Login</button>
+            </form>
+        </div>
+    </div>
+</div>

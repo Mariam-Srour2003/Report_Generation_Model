@@ -1,0 +1,15 @@
+<!-- src/app/components/hospital-cards/hospital-cards.component.html -->
+<div class="card-container">
+    <div class="hospital-card"
+        *ngFor="let hospital of [{name: 'Bahman', data: bahmanData}, {name: 'Al Zahraa', data: alZahraaData}]">
+        <div class="card text-white">
+            <div class="card-header">
+                <mat-icon>local_hospital</mat-icon> {{hospital.name}} Hospital
+            </div>
+            <div class="card-body">
+                <h5 class="card-title"><mat-icon>image</mat-icon>{{hospital.data.images}} Images</h5>
+                <h5 class="card-title"><mat-icon>insert_drive_file</mat-icon>{{hospital.data.reports}} Reports</h5>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,91 @@
+<h2 mat-dialog-title>Add User</h2>
+<mat-dialog-content>
+    <form [formGroup]="UserForm" (ngSubmit)="onSubmit()">
+        <div class="form-fields-container">
+            <div class="selectors-container">
+                <mat-form-field appearance="outline">
+                    <mat-label>First Name</mat-label>
+                    <input matInput formControlName="firstName">
+                    <mat-error>
+                        First Name is required
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Middle Name</mat-label>
+                    <input matInput formControlName="middleName">
+                    <mat-error>
+                        Middle Name is required
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput formControlName="lastName">
+                    <mat-error>
+                        Last Name is required
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="selectors-container">
+                <mat-form-field appearance="outline">
+                    <mat-label>Name</mat-label>
+                    <input matInput formControlName="username">
+                    <mat-error>
+                        Name is required
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput formControlName="email">
+                    <mat-error>
+                        Email is required
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="example-form-field">
+                    <mat-label>Choose a date</mat-label>
+                    <input matInput [matDatepicker]="datepicker" formControlName="dateOfBirth">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-error>
+                        Date Of Birth is required
+                    </mat-error>
+                    <mat-datepicker-toggle matIconSuffix [for]="datepicker"></mat-datepicker-toggle>
+                    <mat-datepicker #datepicker>
+                        <mat-datepicker-actions>
+                            <button mat-button matDatepickerCancel>Cancel</button>
+                            <button mat-raised-button color="primary" matDatepickerApply>Apply</button>
+                        </mat-datepicker-actions>
+                    </mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="selectors-container">
+                <mat-form-field appearance="outline">
+                    <mat-label>Gender</mat-label>
+                    <mat-select formControlName="gender">
+                        <mat-option value="F">Female</mat-option>
+                        <mat-option value="M">Male</mat-option>
+                    </mat-select>
+                    <mat-error>
+                        Gender is required
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Roles</mat-label>
+                    <mat-select formControlName="roleId">
+                        <mat-option value="1">Admin</mat-option>
+                        <mat-option value="2">Doctor</mat-option>
+                        <mat-option value="3">Patient</mat-option>
+                    </mat-select>
+                    <mat-error>
+                        Role is required
+                    </mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions class="dialog-actions-container">
+    <button mat-button color="warn" mat-dialog-close>Cancel</button>
+    <button mat-button color="primary" (click)="onSubmit()" [disabled]="UserForm.invalid" cdkFocusInitial>
+        Save
+    </button>
+</mat-dialog-actions>

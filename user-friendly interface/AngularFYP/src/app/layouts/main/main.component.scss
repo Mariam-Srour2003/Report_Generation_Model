@@ -1,0 +1,30 @@
+/* app.component.scss */
+.sidenav-container {
+    height: 100%!important;
+}
+
+mat-sidenav {
+    width: 150px;
+}
+
+mat-toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+mat-expansion-panel mat-list-item{
+    font-size: xx-small!important;
+}
+mat-mdc-list-item-unscoped-content {
+    font-size: xx-small !important;
+}
+mat-sidenav-container {
+    margin-top: 64px;
+    /* Height of the toolbar */
+}
+
+mat-sidenav-content{
+    padding: 20px;
+}

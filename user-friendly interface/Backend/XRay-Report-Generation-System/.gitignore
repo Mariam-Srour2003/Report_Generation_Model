@@ -1,0 +1,67 @@
+.vs/
+# Ignore Visual Studio temporary files, build results, and
+# build logs.
+*.log
+*.tlog
+*.log~
+
+# Ignore .NET build results
+bin/
+obj/
+[Bb]uild/
+[Ll]og/
+TestResults/
+
+# Ignore package directories
+packages/
+node_modules/
+.vscode/
+wwwroot/lib/
+
+# Ignore user-specific files
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Ignore build output folders
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Ignore JetBrains Rider files
+.idea/
+.idea/*
+
+# Ignore Recycle Bin used by the file system.
+$RECYCLE.BIN/
+
+# Ignore Mac OS files
+.DS_Store
+._*
+
+# Ignore additional configuration files
+.vscode/
+.vscode/*
+.vs/
+
+# Ignore publish output
+*.publishsettings
+*.pubxml
+*.pubxml.user
+
+# Ignore environment settings
+.env
+.env.*
+
+# Ignore StyleCop files
+*.cache
+*.stylecop
+
+# Ignore static files output folders for web projects
+staticwebassets/
+
+# Ignore other files and folders specific to your environment
+.DS_Store
+Thumbs.db

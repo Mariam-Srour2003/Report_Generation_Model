@@ -1,0 +1,39 @@
+<!-- app.component.html -->
+<mat-toolbar color="primary">
+    <span><mat-icon> medical_services</mat-icon><strong> XRAY </strong>Final Year Project</span>
+</mat-toolbar>
+
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav mode="side" opened>
+        <mat-nav-list>
+            <mat-list-item routerLink="/main/dashboard">Dashboard</mat-list-item>
+            <mat-list-item *ngIf="!ispatient" routerLink="/main/users">Users</mat-list-item>
+            <mat-list-item routerLink="/main/allappointments">Appointments</mat-list-item>
+
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Bahman
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <mat-list>
+                    <mat-list-item routerLink="/main/bahmanDenseNet121Model">DenseNet121</mat-list-item>
+                </mat-list>
+            </mat-expansion-panel>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Al-Zahraa
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <mat-list>
+                    <mat-list-item routerLink="/main/alzahraaDenseNet121Model">DenseNet121</mat-list-item>
+                    <mat-list-item routerLink="/main/alzahraaclipModel">Clip</mat-list-item>
+                </mat-list>
+            </mat-expansion-panel>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

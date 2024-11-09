@@ -1,0 +1,101 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="file"] {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #0e4f71;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.error {
+    margin-top: 20px;
+    color: red;
+}
+
+.generated-report {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.generated-report .header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.generated-report .header img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.generated-report .header .model-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.generated-report p {
+    white-space: pre-wrap;
+    line-height: 1.5;
+    font-size: 16px;
+    color: #333;
+}
+
+@media print {
+
+    .container,
+    button,
+    .error {
+        display: none;
+    }
+
+    .generated-report {
+        border: none;
+    }
+}
+
+
+.generated-report {
+    .xray-image {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+}

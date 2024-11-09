@@ -1,0 +1,65 @@
+@use '@angular/material' as mat;
+
+/* Include Angular Material core styles */
+@include mat.core();
+
+/* Define custom variables */
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, 'Helvetica Neue', sans-serif;
+    --primary-color: #0e4f71;
+    --secondary-color: #ceff97;
+}
+
+/* Define a custom primary color palette */
+$mat-primary: (
+    50: #e1eff5,
+    100: #b3d8e7,
+    200: #80bed7,
+    300: #4da3c7,
+    400: #268cb9,
+    500: #0e4f71,
+    600: #0d4968,
+    700: #0b415d,
+    800: #093952,
+    900: #062c3f,
+    A100: #a1d3ff,
+    A200: #6ebaff,
+    A400: #3ba1ff,
+    A700: #2894ff,
+    contrast: (50: #000000,
+        100: #000000,
+        200: #000000,
+        300: #000000,
+        400: #000000,
+        500: #ffffff,
+        600: #ffffff,
+        700: #ffffff,
+        800: #ffffff,
+        900: #ffffff,
+        A100: #000000,
+        A200: #000000,
+        A400: #000000,
+        A700: #000000,
+    )
+);
+
+/* Define custom themes */
+$theme-primary: mat.define-palette($mat-primary);
+$theme-accent: mat.define-palette(mat.$indigo-palette, A200, A100, A400);
+
+/* Create a custom theme */
+$my-theme: mat.define-light-theme((color: (primary: $theme-primary,
+                accent: $theme-accent,
+            ),
+            typography: mat.define-typography-config(),
+            density: 0,
+        ));
+
+/* Apply the custom theme to all Angular Material components */
+@include mat.all-component-themes($my-theme);
