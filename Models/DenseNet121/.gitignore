@@ -1,0 +1,63 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Virtual environment
+venv/
+.env/
+.envrc
+venv.bak/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Machine Learning / Deep Learning
+checkpoints/
+weights/
+*.ckpt
+*.h5
+*.hdf5
+*.pb
+*.pth
+*.pt
+
+# Dataset files
+dataset/
+*.csv
+*.tsv
+*.json
+*.zip
+*.tar.gz
+*.npz
+*.npy
+
+# Logs and debug files
+*.log
+logs/
+debug.log
+
+# Ignore all hidden folders or files
+.DS_Store
+Thumbs.db
+
+# Ignore config or environment files (if not meant to be shared)
+config.yaml
+config.json
+
+# IDE-specific files
+.vscode/
+.idea/
+
+# Python-related cache files
+*.cache
+*.pkl
+*.joblib
