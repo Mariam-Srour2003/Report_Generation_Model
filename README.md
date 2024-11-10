@@ -1,6 +1,6 @@
 
 
-Final year project by Mariam Srour, Aya Haydous, and Hiba Rezek: an X-Ray report generator using machine learning models. We built a user-friendly interface with .NET and Angular, and collected data from Al-Zahraa and Bahman hospitals. The project involved data preprocessing, translation, and report generation.
+Final year project by Mariam Srour, Aya Haydous, and Hiba Rezek: an X-Ray report generator using transformer based models. We built a user-friendly interface with .NET and Angular, and collected data from Al-Zahraa and Bahman hospitals. The project involved data preprocessing, translation, and report generation.
 
 name: Nested_Folder_Image_Copier_and_Renamer
 This script traverses through a nested folder structure in the specified input_dir and copies JPEG images (.jpeg or .jpg) from the deepest subfolders to an output_dir. It renames each copied image based on the name of its main folder (first level of subfolders), overwriting any existing image with the same name. The function ensures the output directory exists before copying files.
